@@ -13,8 +13,8 @@
         <tbody>
         @foreach($transactionCounts as $transactionCount)
             <tr>
-                <td>{{ $transactionCount['email'] }}</td>
-                <td>{{ $transactionCount['count'] }}</td>
+                <td>{{ $transactionCount->user->email }}</td>
+                <td>{{ $transactionCount->count }}</td>
             </tr>
         @endforeach
         </tbody>

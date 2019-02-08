@@ -523,20 +523,12 @@ table {
 }
 
 html {
-  font-family: system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Avenir, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: 400;
   line-height: 1.5;
   color: #22292f;
   box-sizing: border-box;
   font-size: 16px;
-
-  @media (min-width: 992px) {
-    font-size: 1.3vw;
-  }
-
-  @media (min-width: 1200px) {
-    font-size: 21px;
-  }
 }
 
 select:focus,
@@ -562,6 +554,114 @@ img,
 svg {
   display: block;
   vertical-align: middle;
+}
+
+.make-it-rain {
+  width: 130px;
+  height: 150px;
+  position: relative;
+}
+
+.make-it-rain-a,
+.make-it-rain-b,
+.make-it-rain-c,
+.make-it-rain-d {
+  position: absolute;
+  line-height: 1;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.make-it-rain-a {
+  top: 0;
+  left: 30px;
+  font-size: 50px;
+  -webkit-animation-name: float-behind;
+          animation-name: float-behind;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+.make-it-rain-b {
+  right: 0;
+  bottom: 40px;
+  font-size: 40px;
+  -webkit-animation-name: float-behind;
+          animation-name: float-behind;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+.make-it-rain-c {
+  right: 60px;
+  bottom: 0;
+  font-size: 25px;
+  -webkit-animation-name: float-behind;
+          animation-name: float-behind;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.make-it-rain-d {
+  left: 10px;
+  top: 45px;
+  font-size: 80px;
+  -webkit-animation-name: float-front;
+          animation-name: float-front;
+  -webkit-animation-duration: 1.4s;
+          animation-duration: 1.4s;
+}
+
+@-webkit-keyframes float-front {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+
+  to {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+}
+
+@keyframes float-front {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+
+  to {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+}
+
+@-webkit-keyframes float-behind {
+  from {
+    -webkit-transform: translateX(0) translateY(0) scale(1);
+            transform: translateX(0) translateY(0) scale(1);
+  }
+
+  to {
+    -webkit-transform: translateX(5px) translateY(10px) scale(.95);
+            transform: translateX(5px) translateY(10px) scale(.95);
+  }
+}
+
+@keyframes float-behind {
+  from {
+    -webkit-transform: translateX(0) translateY(0) scale(1);
+            transform: translateX(0) translateY(0) scale(1);
+  }
+
+  to {
+    -webkit-transform: translateX(5px) translateY(10px) scale(.95);
+            transform: translateX(5px) translateY(10px) scale(.95);
+  }
 }
 
 .list-reset {
@@ -2946,7 +3046,7 @@ svg {
 }
 
 .font-sans {
-  font-family: system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Avenir, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 .font-serif {
@@ -6160,6 +6260,14 @@ svg {
   z-index: auto;
 }
 
+.bg-green-gradient {
+  background: -webkit-linear-gradient(#51d88a, #1f9d55);
+}
+
+.bg-red-gradient {
+  background: -webkit-linear-gradient(#ef5753, #cc1f1a);
+}
+
 @media (min-width: 576px) {
   .sm\:list-reset {
     list-style: none;
@@ -8535,7 +8643,7 @@ svg {
   }
 
   .sm\:font-sans {
-    font-family: system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: Avenir, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   }
 
   .sm\:font-serif {
@@ -14109,7 +14217,7 @@ svg {
   }
 
   .md\:font-sans {
-    font-family: system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: Avenir, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   }
 
   .md\:font-serif {
@@ -19683,7 +19791,7 @@ svg {
   }
 
   .lg\:font-sans {
-    font-family: system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: Avenir, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   }
 
   .lg\:font-serif {
@@ -25257,7 +25365,7 @@ svg {
   }
 
   .xl\:font-sans {
-    font-family: system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: Avenir, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   }
 
   .xl\:font-serif {

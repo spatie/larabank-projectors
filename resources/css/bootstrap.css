@@ -26,14 +26,6 @@ html {
 
     box-sizing: border-box;
     font-size: 16px;
-
-    @screen lg {
-        font-size: 1.3vw;
-    }
-
-    @screen xl {
-        font-size: 21px;
-    }
 }
 
 select:focus,

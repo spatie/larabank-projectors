@@ -9,39 +9,46 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-<body>
-Larabank
-
-@guest
-    <a href="{{ route('login') }}">{{ __('Login') }}</a>
-    <a href="{{ route('register') }}">{{ __('Register') }}</a>
-@else
-
-    <div>
-        <a href="{{ route('logout') }}"
-           onclick="event.preventDefault();document.getElementById('logout-form').submit();">
-            {{ __('Logout') }}
-        </a>
-
-        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-            @csrf
-        </form>
+<body class="bg-black pb-4">
+    <div class="max-w-lg mx-auto">
+        <header class="mx-4 my-4 flex items-center justify-between">
+            <h1
+                class="font-bold italic pr-1"
+                style="
+                    font-family: 'Bungee';
+                    background: -webkit-linear-gradient(#51d88a, #1f9d55);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                "
+            >
+                💸 LARABANK
+            </h1>
+            @auth
+                <ul class="flex">
+                    <li>
+                        <a
+                            href="{{ route('logout') }}"
+                            class="text-grey-dark"
+                            onclick="event.preventDefault();document.getElementById('logout-form').submit();"
+                        >
+                            Log out
+                        </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+                    </li>
+                </ul>
+            @endguest
+        </header>
     </div>
-
-@endguest
-<main>
-    @yield('content')
-</main>
-</div>
+    <main class="max-w-lg mx-auto px-4">
+        @yield('content')
+    </main>
 </body>
 </html>

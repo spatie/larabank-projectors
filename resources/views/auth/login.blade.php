@@ -1,48 +1,22 @@
 @extends('layouts.app')
 
 @section('content')
-
-    <div>
-        <form method="POST" action="{{ route('login') }}">
-            @csrf
-
-            <div>
-                <label for="email">{{ __('E-Mail Address') }}</label>
-
-                <div class="col-md-6">
-                    <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}"
-                           name="email" value="{{ old('email') }}" required autofocus>
-
-                    @if ($errors->has('email'))
-                        <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                    @endif
+    <div class="flex justify-between w-full mt-12">
+        <div class="w-1/2 mt-4">
+            <form method="POST" action="{{ route('login') }}">
+                @csrf
+                <input id="email" type="email" name="email" placeholder="E-mail" value="{{ old('email') }}" required autofocus class="rounded-sm px-2 h-10 w-full mb-2">
+                <input id="password" type="password" name="password" placeholder="Password" required class="rounded-sm px-2 h-10 w-full mb-2">
+                <div class="flex items-center justify-between">
+                    <button type="submit" class="px-3 h-10 rounded-sm bg-green-gradient text-white font-medium mr-1">
+                        Log in
+                    </button>
+                    <a href="/register" class="text-grey-dark ml-4">
+                        Need an account?
+                    </a>
                 </div>
-            </div>
-
-            <div>
-                <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                <div>
-                    <input id="password" type="password"
-                           class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password"
-                           required>
-
-                    @if ($errors->has('password'))
-                        <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                    @endif
-                </div>
-            </div>
-
-            <div>
-                <button type="submit">
-                    {{ __('Login') }}
-                </button>
-            </div>
-
-        </form>
+            </form>
+        </div>
+        @include('partials.make-it-rain')
     </div>
 @endsection
