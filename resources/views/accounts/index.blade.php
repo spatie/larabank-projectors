@@ -14,7 +14,7 @@
                         </strong>
                     </div>
                     <div class="w-1/3">
-                        <form action="{{ route('accounts.update', $account->id) }}" method="post">
+                        <form action="{{ route('accounts.update', $account->uuid) }}" method="post">
                             @csrf
                             @method('PATCH')
                             <div class="flex flex-wrap">
