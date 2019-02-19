@@ -16,11 +16,10 @@ class AccountsTableSeeder extends Seeder
             Carbon::setTestNow(now()->subDays(3));
 
             while ($realNow->isFuture()) {
-                $this->createAccount($user);
-
-                $this->createTransactions();
-
-                $this->addRandomTime();
+                $this
+                    ->createAccount($user)
+                    ->createTransactions()
+                    ->progressTime();
             }
         });
     }
@@ -28,13 +27,13 @@ class AccountsTableSeeder extends Seeder
     protected function createAccount(User $user)
     {
         if (faker()->boolean(20)) {
-            return;
+            return $this;
         }
 
         $accountName = faker()->randomElement(['Savings', 'Expenses', 'General', 'Company']);
 
         if (Account::where('name', $accountName)->where('user_id', $user->id)->first()) {
-            return;
+            return $this;
         }
 
         Account::createWithAttributes([
@@ -42,7 +41,7 @@ class AccountsTableSeeder extends Seeder
             'user_id' => $user->id,
         ]);
 
-        return;
+        return $this;
     }
 
     protected function createTransactions()
@@ -60,14 +59,18 @@ class AccountsTableSeeder extends Seeder
                 //event(new AccountDeleted($account->uuid));
             }
         });
+
+        return $this;
     }
 
-    protected function addRandomTime()
+    protected function progressTime()
     {
         $now = now();
 
         $newNow = $now->addMinutes(faker()->numberBetween(45, 60 * 30));
 
         Carbon::setTestNow($newNow);
+
+        return $this;
     }
 }

@@ -59,4 +59,9 @@ class AccountsProjector implements Projector
     {
         return 'accountUuid';
     }
+
+    public function resetState()
+    {
+        Account::truncate();
+    }
 }

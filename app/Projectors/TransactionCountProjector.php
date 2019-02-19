@@ -31,4 +31,9 @@ class TransactionCountProjector implements QueuedProjector
 
         TransactionCount::addForAccount($account);
     }
+
+    public function resetState()
+    {
+        TransactionCount::truncate();
+    }
 }
