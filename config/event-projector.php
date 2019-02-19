@@ -13,7 +13,7 @@ return [
      */
     'projectors' => [
         AccountsProjector::class,
-        TransactionCountProjector::class,
+        //TransactionCountProjector::class,
     ],
 
     /*
