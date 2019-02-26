@@ -8,7 +8,7 @@ class TransactionCount extends Model
 {
     public $guarded = [];
 
-    public static function addForAccount(Account $account)
+    public static function record(Account $account)
     {
         $user = User::where('id', $account->user_id)->first();
 

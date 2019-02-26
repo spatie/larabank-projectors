@@ -22,14 +22,14 @@ class TransactionCountProjector implements QueuedProjector
     {
         $account = Account::uuid($event->accountUuid);
 
-        TransactionCount::addForAccount($account);
+        TransactionCount::record($account);
     }
 
     public function onMoneySubtracted(MoneySubtracted $event)
     {
         $account = Account::uuid($event->accountUuid);
 
-        TransactionCount::addForAccount($account);
+        TransactionCount::record($account);
     }
 
     public function resetState()
