@@ -11,6 +11,7 @@
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -18,15 +19,7 @@
 <body class="bg-black pb-4">
     <div class="max-w-lg mx-auto">
         <header class="mx-4 my-4 flex items-center justify-between">
-            <h1
-                class="font-bold italic pr-1"
-                style="
-                    font-family: 'Bungee';
-                    background: -webkit-linear-gradient(#51d88a, #1f9d55);
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                "
-            >
+            <h1 class="logotype pr-1">
                 💸 LARABANK
             </h1>
             @auth

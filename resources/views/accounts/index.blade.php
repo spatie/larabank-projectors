@@ -24,6 +24,7 @@
                                     name="amount"
                                     placeholder="Amount"
                                     class="rounded-sm px-2 h-10 w-full mb-2"
+                                    autocomplete="off"
                                 >
                                 <button
                                     type="submit"
