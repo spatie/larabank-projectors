@@ -2,7 +2,7 @@
 
 ![Larabank accounts page](https://spatie.github.io/larabank-traditional/screenshot.png)
 
-This is an example app used in the documentation of [laravel-event-projector](https://docs.spatie.be/laravel-event-projector)
+This is an example app used in the documentation of [laravel-event-projector](https://docs.spatie.be/laravel-event-projector).
 
 ## Getting started
 
