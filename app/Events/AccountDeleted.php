@@ -2,9 +2,9 @@
 
 namespace App\Events;
 
-use Spatie\EventProjector\ShouldBeStored;
+use Spatie\EventProjector\DomainEvent;
 
-class AccountDeleted implements ShouldBeStored
+class AccountDeleted implements DomainEvent
 {
     /** @var string */
     public $accountUuid;
