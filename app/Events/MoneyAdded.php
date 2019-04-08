@@ -2,9 +2,9 @@
 
 namespace App\Events;
 
-use Spatie\EventProjector\DomainEvent;
+use Spatie\EventProjector\ShouldBeStored;
 
-class MoneyAdded implements DomainEvent
+class MoneyAdded implements ShouldBeStored
 {
     /** @var string */
     public $accountUuid;
