@@ -13,10 +13,6 @@ class BigAmountAddedReactor implements EventHandler
 {
     use HandlesEvents;
 
-    protected $handlesEvents = [
-        MoneyAdded::class => 'onMoneyAdded',
-    ];
-
     public function onMoneyAdded(MoneyAdded $event)
     {
         if ($event->amount < 5000) {

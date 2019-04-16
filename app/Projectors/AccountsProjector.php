@@ -14,13 +14,6 @@ class AccountsProjector implements Projector
 {
     use ProjectsEvents;
 
-    protected $handlesEvents = [
-        AccountCreated::class => 'onAccountCreated',
-        MoneyAdded::class => 'onMoneyAdded',
-        MoneySubtracted::class => 'onMoneySubtracted',
-        AccountDeleted::class => 'onAccountDeleted',
-    ];
-
     public function onAccountCreated(AccountCreated $event)
     {
         Account::create($event->accountAttributes);
@@ -53,11 +46,6 @@ class AccountsProjector implements Projector
         $account = Account::uuid($event->accountUuid);
 
         $account->delete();
-    }
-
-    public function streamEventsBy(): string
-    {
-        return 'accountUuid';
     }
 
     public function resetState()

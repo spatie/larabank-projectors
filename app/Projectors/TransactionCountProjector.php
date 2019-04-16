@@ -13,11 +13,6 @@ class TransactionCountProjector implements QueuedProjector
 {
     use ProjectsEvents;
 
-    protected $handlesEvents = [
-        MoneyAdded::class => 'onMoneyAdded',
-        MoneySubtracted::class => 'onMoneySubtracted',
-    ];
-
     public function onMoneyAdded(MoneyAdded $event)
     {
         $account = Account::uuid($event->accountUuid);
