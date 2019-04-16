@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "16d861e9829d092ae79b18c54ad50964",
+    "content-hash": "3f41803dea243b2d9fdd85bf9f2c413e",
     "packages": [
         {
             "name": "cakephp/chronos",
@@ -518,16 +518,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.8.11",
+            "version": "v5.8.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "a2cf7a7983329d63edc6fde43142b232bb61aa0a"
+                "reference": "6dd75b67811a265c57144ab15f25a8061ed4721f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/a2cf7a7983329d63edc6fde43142b232bb61aa0a",
-                "reference": "a2cf7a7983329d63edc6fde43142b232bb61aa0a",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/6dd75b67811a265c57144ab15f25a8061ed4721f",
+                "reference": "6dd75b67811a265c57144ab15f25a8061ed4721f",
                 "shasum": ""
             },
             "require": {
@@ -661,7 +661,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2019-04-10T13:05:18+00:00"
+            "time": "2019-04-16T13:47:32+00:00"
         },
         {
             "name": "laravel/horizon",
@@ -1687,16 +1687,16 @@
         },
         {
             "name": "spatie/laravel-event-projector",
-            "version": "dev-auto-discover-event-handlers",
+            "version": "2.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-event-projector.git",
-                "reference": "90d9eef91900d6c26f884db84066d33bc78f7a04"
+                "reference": "bf244d3f5e05342a4fcd9d652ac29b6316c68cff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-event-projector/zipball/90d9eef91900d6c26f884db84066d33bc78f7a04",
-                "reference": "90d9eef91900d6c26f884db84066d33bc78f7a04",
+                "url": "https://api.github.com/repos/spatie/laravel-event-projector/zipball/bf244d3f5e05342a4fcd9d652ac29b6316c68cff",
+                "reference": "bf244d3f5e05342a4fcd9d652ac29b6316c68cff",
                 "shasum": ""
             },
             "require": {
@@ -1756,7 +1756,7 @@
                 "sourcing",
                 "spatie"
             ],
-            "time": "2019-04-16T09:33:33+00:00"
+            "time": "2019-04-16T14:05:40+00:00"
         },
         {
             "name": "spatie/laravel-schemaless-attributes",
@@ -5549,9 +5549,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "spatie/laravel-event-projector": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
