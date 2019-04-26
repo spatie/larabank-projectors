@@ -8,7 +8,7 @@ use App\Events\MoneySubtracted;
 use App\TransactionCount;
 use Spatie\EventProjector\Projectors\ProjectsEvents;
 use Spatie\EventProjector\Projectors\QueuedProjector;
-
+/*
 class TransactionCountProjector implements QueuedProjector
 {
     use ProjectsEvents;
@@ -32,3 +32,4 @@ class TransactionCountProjector implements QueuedProjector
         TransactionCount::truncate();
     }
 }
+*/
