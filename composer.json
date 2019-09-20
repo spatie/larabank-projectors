@@ -68,8 +68,5 @@
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
         ]
-    },
-    "suggest": {
-        "spatie/laravel-event-sourcing": "spatie/laravel-event-projector has been renamed to spatie/laravel-event-sourcing. Please upgrade"
     }
 }
