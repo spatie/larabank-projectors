@@ -37,7 +37,7 @@ class AccountsTableSeeder extends Seeder
         }
 
         Account::createWithAttributes([
-            'name' => $accountName,
+            'name'    => $accountName,
             'user_id' => $user->id,
         ]);
 

@@ -12,7 +12,7 @@ class Account extends Model
 {
     public $guarded = [];
 
-    public static function createWithAttributes(array $attributes): Account
+    public static function createWithAttributes(array $attributes): self
     {
         /*
          * Let's generate a uuid.
@@ -30,7 +30,6 @@ class Account extends Model
         return static::uuid($attributes['uuid']);
     }
 
-
     public function addMoney(int $amount)
     {
         event(new MoneyAdded($this->uuid, $amount));
@@ -41,7 +40,7 @@ class Account extends Model
         event(new MoneySubtracted($this->uuid, $amount));
     }
 
-    public static function uuid(string $uuid): ?Account
+    public static function uuid(string $uuid): ?self
     {
         return static::where('uuid', $uuid)->first();
     }

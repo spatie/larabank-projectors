@@ -3,7 +3,6 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class TransactionCount extends Model
 {
@@ -13,7 +12,7 @@ class TransactionCount extends Model
     {
         $user = User::where('id', $account->user_id)->first();
 
-        $transactionCounter = TransactionCount::firstOrCreate(['email' => $user->email]);
+        $transactionCounter = self::firstOrCreate(['email' => $user->email]);
 
         $transactionCounter->count += 1;
 
