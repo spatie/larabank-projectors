@@ -6,8 +6,8 @@ use App\Account;
 use App\Events\MoneyAdded;
 use App\Mail\BigAmountAddedMail;
 use Illuminate\Support\Facades\Mail;
-use Spatie\EventProjector\EventHandlers\EventHandler;
-use Spatie\EventProjector\EventHandlers\HandlesEvents;
+use Spatie\EventSourcing\EventHandlers\EventHandler;
+use Spatie\EventSourcing\EventHandlers\HandlesEvents;
 
 class BigAmountAddedReactor implements EventHandler
 {

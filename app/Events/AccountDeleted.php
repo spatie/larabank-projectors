@@ -2,7 +2,7 @@
 
 namespace App\Events;
 
-use Spatie\EventProjector\ShouldBeStored;
+use Spatie\EventSourcing\ShouldBeStored;
 
 class AccountDeleted implements ShouldBeStored
 {

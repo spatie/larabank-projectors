@@ -6,8 +6,8 @@ use App\Account;
 use App\Events\MoneyAdded;
 use App\Events\MoneySubtracted;
 use App\TransactionCount;
-use Spatie\EventProjector\Projectors\ProjectsEvents;
-use Spatie\EventProjector\Projectors\QueuedProjector;
+use Spatie\EventSourcing\Projectors\ProjectsEvents;
+use Spatie\EventSourcing\Projectors\QueuedProjector;
 /*
 class TransactionCountProjector implements QueuedProjector
 {

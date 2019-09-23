@@ -7,8 +7,8 @@ use App\Events\AccountCreated;
 use App\Events\AccountDeleted;
 use App\Events\MoneyAdded;
 use App\Events\MoneySubtracted;
-use Spatie\EventProjector\Projectors\Projector;
-use Spatie\EventProjector\Projectors\ProjectsEvents;
+use Spatie\EventSourcing\Projectors\Projector;
+use Spatie\EventSourcing\Projectors\ProjectsEvents;
 
 class AccountsProjector implements Projector
 {
