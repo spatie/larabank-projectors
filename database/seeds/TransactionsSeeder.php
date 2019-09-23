@@ -1,11 +1,8 @@
 <?php
 
 use App\Account;
-use App\Events\AccountDeleted;
 use App\User;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Carbon;
-use Illuminate\Support\LazyCollection;
 use Laravel\Telescope\Telescope;
 
 class TransactionsSeeder extends Seeder
@@ -19,8 +16,8 @@ class TransactionsSeeder extends Seeder
 
         if (!$account) {
             $account = Account::createWithAttributes([
-                'uuid' => faker()->uuid,
-                'name' => 'My account',
+                'uuid'    => faker()->uuid,
+                'name'    => 'My account',
                 'user_id' => $user->id,
                 'balance' => 0,
             ]);
