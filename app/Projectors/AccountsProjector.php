@@ -7,13 +7,10 @@ use App\Events\AccountCreated;
 use App\Events\AccountDeleted;
 use App\Events\MoneyAdded;
 use App\Events\MoneySubtracted;
-use Spatie\EventSourcing\Projectors\Projector;
-use Spatie\EventSourcing\Projectors\ProjectsEvents;
+use Spatie\EventSourcing\EventHandlers\Projectors\Projector;
 
-class AccountsProjector implements Projector
+class AccountsProjector extends Projector
 {
-    use ProjectsEvents;
-
     public function onAccountCreated(AccountCreated $event)
     {
         Account::create($event->accountAttributes);

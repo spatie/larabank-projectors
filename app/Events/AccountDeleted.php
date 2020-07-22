@@ -2,9 +2,9 @@
 
 namespace App\Events;
 
-use Spatie\EventSourcing\ShouldBeStored;
+use Spatie\EventSourcing\StoredEvents\ShouldBeStored;
 
-class AccountDeleted implements ShouldBeStored
+class AccountDeleted extends ShouldBeStored
 {
     /** @var string */
     public $accountUuid;
