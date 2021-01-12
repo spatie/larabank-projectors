@@ -9,7 +9,6 @@ use App\TransactionCount;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Spatie\EventSourcing\EventHandlers\Projectors\Projector;
 
-
 class TransactionCountProjector extends Projector implements ShouldQueue
 {
     public function onMoneyAdded(MoneyAdded $event)
