@@ -6,10 +6,11 @@ use App\Account;
 use App\Events\MoneyAdded;
 use App\Events\MoneySubtracted;
 use App\TransactionCount;
+use Illuminate\Contracts\Queue\ShouldQueue;
 use Spatie\EventSourcing\EventHandlers\Projectors\Projector;
 
-/*
-class TransactionCountProjector extends Projector
+
+class TransactionCountProjector extends Projector implements ShouldQueue
 {
     public function onMoneyAdded(MoneyAdded $event)
     {
@@ -30,4 +31,4 @@ class TransactionCountProjector extends Projector
         TransactionCount::truncate();
     }
 }
-*/
+
