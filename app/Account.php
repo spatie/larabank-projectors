@@ -25,7 +25,7 @@ class Account extends Model
         /*
          * The account will be created inside this event using the generated uuid.
          */
-        event(new AccountCreated($attributes));
+        event(new AccountCreated($attributes['uuid'], $attributes));
 
         /*
          * The uuid will be used the retrieve the created account.
