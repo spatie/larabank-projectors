@@ -20,6 +20,6 @@ class BigAmountAddedMail extends Mailable
     {
         return $this
             ->subject('A big amount was added!')
-            ->view('mails.bigAmountAdded');
+            ->markdown('mails.bigAmountAdded');
     }
 }
