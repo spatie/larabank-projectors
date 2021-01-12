@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use App\Events\AccountCreated;
 use App\Events\MoneyAdded;
 use App\Events\MoneySubtracted;
@@ -10,6 +11,8 @@ use Ramsey\Uuid\Uuid;
 
 class Account extends Model
 {
+    use HasFactory;
+
     public $guarded = [];
 
     public static function createWithAttributes(array $attributes): self

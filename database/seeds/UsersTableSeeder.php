@@ -7,11 +7,11 @@ class UsersTableSeeder extends Seeder
 {
     public function run()
     {
-        factory(User::class)->create([
+        User::factory()->create([
             'name'  => 'User',
             'email' => 'user@larabank.com',
         ]);
 
-        factory(User::class, 4)->create();
+        User::factory()->count(4)->create();
     }
 }
