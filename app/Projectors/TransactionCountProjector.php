@@ -6,14 +6,10 @@ use App\Account;
 use App\Events\MoneyAdded;
 use App\Events\MoneySubtracted;
 use App\TransactionCount;
-use Spatie\EventSourcing\Projectors\ProjectsEvents;
-use Spatie\EventSourcing\Projectors\QueuedProjector;
+use Spatie\EventSourcing\EventHandlers\Projectors\Projector;
 
-/*
-class TransactionCountProjector implements QueuedProjector
+class TransactionCountProjector extends Projector
 {
-    use ProjectsEvents;
-
     public function onMoneyAdded(MoneyAdded $event)
     {
         $account = Account::uuid($event->accountUuid);
@@ -33,4 +29,3 @@ class TransactionCountProjector implements QueuedProjector
         TransactionCount::truncate();
     }
 }
-*/
