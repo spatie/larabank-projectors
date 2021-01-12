@@ -8,6 +8,7 @@ use App\Events\MoneySubtracted;
 use App\TransactionCount;
 use Spatie\EventSourcing\EventHandlers\Projectors\Projector;
 
+/*
 class TransactionCountProjector extends Projector
 {
     public function onMoneyAdded(MoneyAdded $event)
@@ -29,3 +30,4 @@ class TransactionCountProjector extends Projector
         TransactionCount::truncate();
     }
 }
+*/
