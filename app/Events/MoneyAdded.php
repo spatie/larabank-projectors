@@ -7,7 +7,7 @@ use Spatie\EventSourcing\StoredEvents\ShouldBeStored;
 class MoneyAdded extends ShouldBeStored
 {
     public function __construct(
-        string $accountUuid,
-        int $amount,
+        public string $accountUuid,
+        public int $amount,
     ) {}
 }
