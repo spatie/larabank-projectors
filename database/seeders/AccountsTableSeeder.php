@@ -1,5 +1,7 @@
 <?php
 
+namespace Database\Seeders;
+
 use App\Account;
 use App\Events\AccountDeleted;
 use App\User;
