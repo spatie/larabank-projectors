@@ -11,18 +11,10 @@ class BigAmountAddedMail extends Mailable
 {
     use Queueable, SerializesModels;
 
-    /** @var \App\Mail\Account */
-    public $account;
-
-    /** @var int */
-    public $amount;
-
-    public function __construct(Account $account, int $amount)
-    {
-        $this->account = $account;
-
-        $this->amount = $amount;
-    }
+    public function __construct(
+        public Account $account,
+        public int $amount
+    ) {}
 
     public function build()
     {
