@@ -22,10 +22,6 @@ class AccountsProjector extends Projector
 
         $account->balance += $event->amount;
 
-        if ($account->balance >= 0) {
-            $this->broke_mail_sent = false;
-        }
-
         $account->save();
     }
 
