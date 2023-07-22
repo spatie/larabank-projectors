@@ -19,7 +19,7 @@ class CreateAccountRequest extends FormRequest
         ];
     }
 
-    public function validated()
+    public function validated($keys = null, $default = null)
     {
         return array_merge(parent::validated(), ['user_id' => Auth::user()->id]);
     }
